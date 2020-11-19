@@ -26,7 +26,6 @@ export default class Input extends React.Component {
     }
 
     render() {
-
         const divClasses = classnames({
             'form-group': true,
             'has-error': this.props.error ? true : false
@@ -42,7 +41,7 @@ export default class Input extends React.Component {
                     onChange={ this.handleChange }
                     className='form-control'
                 />
-                { this.props.error ? <span className='help-block'>{this.props.error}</span> : null }
+                { this.props.error ? <span className='help-block'>{ this.props.error }</span> : null }
             </div>
         );
     }
