@@ -16,7 +16,6 @@ import './styles.less';
 class HomePage extends React.Component {
 
     static path = '/';
-
     static propTypes = {
         home: PropTypes.object.isRequired,
         dispatch: PropTypes.func.isRequired
