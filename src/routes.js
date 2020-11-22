@@ -4,6 +4,7 @@ import App from './app';
 
 import { HomePage, HomeRoutes } from './pages/home';
 import { ContactRoutes } from './pages/contact';
+import { ListRoutes } from './pages/list';
 import ErrorPage from './pages/error';
 
 export default (
@@ -12,6 +13,7 @@ export default (
 
         { HomeRoutes }
         { ContactRoutes }
+        { ListRoutes }
 
         <Route path='*' component={ ErrorPage } />
     </Route>
