@@ -28,7 +28,9 @@ export default class ItemDetails extends React.Component {
         const { items } = actualStore.list;
 
         const idx = items.findIndex(item => item.id === Number(this.props.routeParams.id));
+
         return {
+            id: items[ idx ].id,
             name: items[ idx ].name,
             youtube: items[ idx ].youtube
         };
@@ -42,13 +44,13 @@ export default class ItemDetails extends React.Component {
                         <div className='panel-heading'>
                             <b>{ this.state.id }</b> { this.state.name }
                         </div>
-                    </div>
-                    <div className='panel-body'>
-                        <iframe
-                            src={`https://www.youtube.com/embed/${ this.state.youtube }`}
-                            frameBorder='0'
-                            allowFullScreen
-                        />
+                        <div className='panel-body'>
+                            <iframe
+                                src={`https://www.youtube.com/embed/${ this.state.youtube }`}
+                                frameBorder='0'
+                                allowFullScreen
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
